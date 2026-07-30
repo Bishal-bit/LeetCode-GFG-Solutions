@@ -64,3 +64,14 @@ I update this repository regularly as I solve new problems. Each solution repres
 If this repository helps you in your DSA journey, consider giving it a **⭐ Star**. Your support is appreciated!
 
 Happy Coding! 🚀
+
+## 👤 Author
+
+**Bishal Sarkar**  
+Data Science @ IIT Guwahati  
+
+Passionate about Machine Learning, RAG systems, and real-world AI applications.
+
+- 🔗 GitHub: https://github.com/bishal-bit  
+- 💼 LinkedIn: [https://linkedin.com/in/bishal-sarkar](https://www.linkedin.com/in/bishal-sarkar-b98106217/)  
+- 📧 Email: bishal.sarkar2001@gmail.com
