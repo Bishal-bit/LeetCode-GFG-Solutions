@@ -30,6 +30,7 @@ Most solutions are implemented in **Python**.
 
 ## 🎯 Goals
 
+"Consistency beats intensity."
 * Solve DSA problems consistently.
 * Improve algorithmic thinking and coding efficiency.
 * Master common interview patterns.
@@ -63,6 +64,18 @@ Most solutions are implemented in **Python**.
 ## 📈 Progress
 
 I update this repository regularly as I solve new problems. Each solution represents another step toward improving my problem-solving skills and interview readiness.
+
+## 🌟 Philosophy
+
+Learn → Practice → Optimize → Repeat
+
+I believe mastery comes from consistent practice, understanding why an algorithm works, and writing solutions that are both efficient and easy to understand.
+
+## 🤝 Contributions
+
+If you spot a better approach or have suggestions for improving a solution, feel free to open an issue or submit a pull request.
+
+Learning is always better together.
 
 ## ⭐ If You Find This Repository Helpful
 
