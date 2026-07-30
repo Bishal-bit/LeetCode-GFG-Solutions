@@ -1,3 +1,8 @@
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![LeetCode](https://img.shields.io/badge/LeetCode-Practice-orange?logo=leetcode)
+![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-DSA-darkgreen?logo=geeksforgeeks)
+![Last Commit](https://img.shields.io/github/last-commit/<username>/<repo>)
+![License](https://img.shields.io/github/license/<username>/<repo>)
 # LeetCode-GFG-Solutions
 # 🚀 Data Structures & Algorithms Practice
 
