@@ -5,22 +5,22 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def dfs(self,root: Optional[TreeNode], ans: List[int]) :
-        #If root==NULL then just return
-        #root->left->right
-        if not root : return
-        ans.append(root.val)
-        self.dfs(root.left,ans)
-        self.dfs(root.right,ans)
-
     def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        #Using Stack
         ans=[]
-        #DFS Traversal
-        self.dfs(root,ans)
+        if not root : return ans
+        st=[]
+        st.append(root)
+        while st :
+            #Access top node, pop it then put it's value to ans
+            node=st.pop()
+            ans.append(node.val)
+            #Due to LIFO nature of stack we push right then left
+            #So that left comes out before right
+            if node.right : st.append(node.right)
+            if node.left : st.append(node.left)
         #Return ans
         return ans
-
-        
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
