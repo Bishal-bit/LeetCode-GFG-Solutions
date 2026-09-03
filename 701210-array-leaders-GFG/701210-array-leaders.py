@@ -3,15 +3,13 @@ class Solution:
         # code here
         n=len(arr)
         ans=[]
-        maxi=float('-inf')
         #Treverse in reverse order
         for i in range(n-1,-1,-1) :
-            #If element>=maxi then update maxi and append to ans
-            if arr[i]>=maxi :
-                maxi=arr[i]
-                ans.append(maxi)
-        #Reverse ans
-        ans.reverse()        
+            #not ans because last element of arr is always leader
+            #For rest of the elements, we are checking is it >=ans[-1] 
+            if not ans or arr[i]>=ans[-1] : ans.append(arr[i])
+        #Reverse the ans
+        ans.reverse()
         return ans
 
 # Synced seamlessly with LeetHub Pro
