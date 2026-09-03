@@ -4,10 +4,9 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         n=len(nums)
-        left=0
-        mid=0
+        left=mid=0
         right=n-1
-        while(mid<=right) :
+        while mid<=right :
             #If nums[mid]==0 then swap nums[left], nums[mid]
             #Increment left, mid
             if nums[mid]==0 :
@@ -21,8 +20,6 @@ class Solution:
             else :
                 nums[mid], nums[right]=nums[right], nums[mid]
                 right-=1
-
-        
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
