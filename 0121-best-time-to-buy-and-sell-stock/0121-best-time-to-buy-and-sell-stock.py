@@ -9,10 +9,9 @@ class Solution:
             #Update maxprofit as max(maxprofit, profit)
             maxprofit=max(maxprofit, profit)
             #Update buy as min(buy,it)
-            buy=min(buy,it)
+            buy=min(buy, it)
         #Return maxprofit
         return maxprofit
-        
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
