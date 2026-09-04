@@ -9,16 +9,16 @@ class Solution:
             elif it=='(' and count>=1 :
                 count+=1
                 ans.append(it)
+            
             #If it==closing, count>1 then decrement count, add it to ans string
             elif it==')' and count>1 :
                 count-=1
                 ans.append(it)
             #If it==Outermost closing, count==1 then decrement count, dont add it to ans string
             elif it==')' and count==1 : count-=1
+        
         #Function expects return type as string. So convert list to string
         return "".join(ans)
-            
-        
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
