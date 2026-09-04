@@ -5,13 +5,12 @@ class Solution:
         while left<=right :
             mid=left+ (right-left)//2
             #If target is in mid index then return True
-            if nums[mid]==target : return True
+            if nums[mid]== target : return True
             
-            #Can not retermine which part is sorted due to duplicates
+            #Can not determine which part is sorted due to duplicates
             if nums[left]==nums[mid]==nums[right] :
                 left+=1
                 right-=1
-            
             #If left---mid portion is sorted
             elif nums[left]<=nums[mid] :
                 #If target in in b/w left and mid then shrink the right side
@@ -19,12 +18,11 @@ class Solution:
                 #Else shrink left side
                 else : left=mid+1
             
-            ##If mid---right portion is sorted
-            else : 
+            #If mid---right portion is sorted
+            else :
                 if nums[mid]<target<=nums[right] : left=mid+1
                 else : right=mid-1
-        
-        #Return False
+        #return False
         return False
         
 
