@@ -12,9 +12,10 @@ class Solution:
                 ans=mid
                 high=mid-1
             #Else update low as mid+1
-            else : 
+            else :
                 low=mid+1
         return ans
+
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
