@@ -9,7 +9,7 @@ class Solution:
             #Calculate mid
             mid=low + (high-low)//2
             #If arr[mid]>target then update ans as mid and check the left portion by high=mid-1
-            if arr[mid]>target :
+            if arr[mid]>target : 
                 ans=mid
                 high=mid-1
             #Else update low as mid+1
