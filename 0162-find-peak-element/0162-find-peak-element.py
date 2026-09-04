@@ -9,17 +9,14 @@ class Solution:
         if nums[n-1]>nums[n-2] : return n-1
         left, right=1, n-2
         while left<=right :
-            mid= left + (right-left)//2
+            mid=left+ (right-left)//2
             #mid is greater than mid-1 and mid+1 then return mid
-            if nums[mid]>nums[mid-1] and nums[mid]>nums[mid+1] : return mid
+            if nums[mid-1]<nums[mid] and nums[mid]>nums[mid+1] : return mid
             #mid-1 is smaller then update left
             elif nums[mid-1]<nums[mid] : left=mid+1
             #mid-1 is greater then update right
             else : right=mid-1
         return -1
-        
-
-
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
