@@ -8,15 +8,14 @@
 class Solution:
     def deleteHead(self, head):
         # code here
-        #If it is only a single node then return None
-        if head.next is None : return None
-        #Declare temp as head.next
-        #Disconnect head and temp
-        temp=head.next
-        temp.prev=None
-        head.next=None
-        #Return temp
-        return temp
+        #If it is empty or only a single node then return None
+        if not head or not head.next : return None
+        #Shift head to head.next and do head.prev=None
+        head=head.next
+        head.prev=None
+        
+        #Return head
+        return head
         
 
 # Synced seamlessly with LeetHub Pro
