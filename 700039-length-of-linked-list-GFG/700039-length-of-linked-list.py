@@ -7,10 +7,12 @@ class Node:
 class Solution:
     def getCount(self, head):
         # code here
-        count=0
         temp=head
+        #If it's empty return 0 
+        if not temp : return 0
+        count=0
+        #Count no of nodes by traversing nodes of linkedlist
         while temp :
-            #Increment count for each node of linked list
             count+=1
             temp=temp.next
         return count
