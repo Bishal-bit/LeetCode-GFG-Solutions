@@ -15,9 +15,6 @@ class Solution:
         node.val=node.next.val
         #node.next is connected to node.next.next to skip a node
         node.next=node.next.next
-
-
-
         
 
 # Synced seamlessly with LeetHub Pro
