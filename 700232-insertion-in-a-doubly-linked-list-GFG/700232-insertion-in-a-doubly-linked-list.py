@@ -10,32 +10,28 @@ class Node:
 class Solution:
     def insertAtPos(self, head, p, x):
         # Code Here
-        count=0
         temp=head
+        count=0
         while temp :
-            #count==p is for finding out the position be shifting temp
+            #count==p is for finding out the position of insertion
             if count==p : break
-            temp=temp.next
             count+=1
+            temp=temp.next
         #If p crossed whole doubly LL then just return head
-        if temp is None : return head
+        if not temp : return head
         
-        
-        #Declare newNode
-        newNode=Node(x)
-        #Declare temp1
+        #Declare newnode, temp1
+        newnode=Node(x)
         temp1=temp.next
-        #Connect newNode's prev and next 
-        newNode.next=temp1
-        newNode.prev=temp
-        
+        #Connect newnode's prev and next 
+        newnode.next=temp1
+        newnode.prev=temp
         
         #If temp is the last node then temp1 is actually NULL
         #So check if it actually exists or not
-        #Based on this connect prev,next pointing to newNode
-        if temp1 : temp1.prev=newNode
-        temp.next=newNode
-        #Return head
+        #Based on this connect prev,next pointing to newnode
+        if temp1 : temp1.prev=newnode
+        temp.next=newnode
         return head
         
         
