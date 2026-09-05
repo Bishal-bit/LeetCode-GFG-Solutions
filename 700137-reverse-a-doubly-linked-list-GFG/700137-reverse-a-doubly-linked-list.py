@@ -10,7 +10,7 @@ class Solution:
     def reverse(self, head):
         # code here
         #If it is only a single node then return head
-        if head is None or head.next is None : return head
+        if not head or not head.next : return head
         #Declare temp, pre
         temp=head
         pre=None
@@ -19,13 +19,11 @@ class Solution:
             temp.prev=temp.next
             temp.next=pre
             
-            #Move to the next node. Here, temp.prev=temp.next
+            #Move to the next node. Here, actually temp.prev=temp.next
             temp=temp.prev
-        #pre points to the previous node of new head
-        #So head=pre.prev 
-        if pre : head=pre.prev    
+        #Pre is the second last node, pre.prev points to the new head
+        if pre : head=pre.prev
         return head
-        
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
