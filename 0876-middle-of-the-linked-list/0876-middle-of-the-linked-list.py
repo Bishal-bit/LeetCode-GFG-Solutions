@@ -14,7 +14,6 @@ class Solution:
             fast=fast.next.next
         #Slow is at mid position
         return slow
-        
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
