@@ -5,10 +5,9 @@
 #         self.next = next
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        #Declare temp,previous,next nodes
-        temp=head
+        #Declare temp, previous, next nodes
+        temp=nex=head
         pre=None
-        nex=head
         while temp :
             nex=temp.next
             temp.next=pre
@@ -16,6 +15,7 @@ class Solution:
             temp=nex
         #Return pre
         return pre
+
         
 
 # Synced seamlessly with LeetHub Pro
