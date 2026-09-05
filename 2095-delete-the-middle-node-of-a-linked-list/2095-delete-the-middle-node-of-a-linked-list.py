@@ -5,17 +5,17 @@
 #         self.next = next
 class Solution:
     def deleteMiddle(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        #Do same as finding middle of LL
-        if head==None or head.next==None : return None
+        if not head or not head.next : return None
+        #Go similer to cycle detection algorithm of LL to find the middle node
         slow=fast=head
         while fast and fast.next :
             #Use temp to eventually store node situated just before middle node
             temp=slow
             slow=slow.next
             fast=fast.next.next
-        
-        #Connect temp.next to slow.next That means slow node is removed
-        temp.next=slow.next
+            if slow==fast : break
+        #Connect temp.next to temp.next.next That means slow i.e. middle node is removed
+        temp.next=temp.next.next
         return head
 
 # Synced seamlessly with LeetHub Pro
