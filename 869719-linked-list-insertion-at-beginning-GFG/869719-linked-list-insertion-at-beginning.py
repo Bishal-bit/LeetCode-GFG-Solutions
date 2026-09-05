@@ -9,12 +9,11 @@ class Node:
 class Solution:
     def insertAtFront(self, head, x):
         #code here
-        #Declare newNode 
-        newNode=Node(x)
-        #newNode->head
-        newNode.next=head
+        #Declare newnode 
+        newnode=Node(x)
+        newnode.next=head       #newnode->head
         #Return newNode
-        return newNode
+        return newnode
 
 
 # Synced seamlessly with LeetHub Pro
