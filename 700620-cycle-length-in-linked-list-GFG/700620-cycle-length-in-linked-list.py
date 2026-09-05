@@ -7,26 +7,24 @@ class Node:
 class Solution:
     def lengthOfLoop(self, head):
         #code here
-        #Go similer to cycle detection algorithm of LL
         slow=fast=head
+        #Go similer to cycle detection algorithm of LL
         while fast and fast.next :
             slow=slow.next
             fast=fast.next.next
             #If slow==fast i.e. cycle detected then break
             if slow==fast : break
-        #Executes only if the while loop ends without a break
-        else : return 0  
-        #Initialize count as 1
-        count=1
-        #Declare temp as slow.next
+        #Else executes when the loop finishes normally i.e. it was not stopped by break
+        else : return 0      #If there is no loop
+        #Initialize temp as slow.next and count as 1
         temp=slow.next
-        #while temp!=slow increment count and update temp
-        while temp!=slow :
-            count+=1
+        count=1   
+        #Go untill temp becomes equal to slow and increment count
+        while slow!=temp :
             temp=temp.next
+            count+=1
         #Return count
         return count
-        
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
