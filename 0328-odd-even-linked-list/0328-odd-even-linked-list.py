@@ -5,7 +5,7 @@
 #         self.next = next
 class Solution:
     def oddEvenList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        if head==None or head.next==None : return head
+        if not head or not head.next : return head
         #Declare odd,even, oddhead,evenhead
         odd=oddhead=head
         even=evenhead=head.next
@@ -14,6 +14,7 @@ class Solution:
             #Go for 2 steps for both odd,even
             odd.next=odd.next.next
             even.next=even.next.next
+
             #Shift odd, even
             odd=odd.next
             even=even.next
@@ -21,7 +22,7 @@ class Solution:
         odd.next=evenhead
         #Return oddhead
         return oddhead
-        
+
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
