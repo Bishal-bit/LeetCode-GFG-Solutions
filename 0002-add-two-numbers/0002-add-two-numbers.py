@@ -18,17 +18,16 @@ class Solution:
                 carry+=temp2.val
                 temp2=temp2.next
             
-            #Add carry%2 as next new node to dummy, carry//=10, shift dummy
-            dummy.next=ListNode (carry%10)
+            #Add carry%10 as next new node to dummy, carry//=10, shift dummy
+            dummy.next=ListNode(carry%10)
             carry//=10
             dummy=dummy.next
         
         #If carry remains then add as mext node
-        if carry : dummy.next=ListNode (carry)
+        if carry : dummy.next=ListNode(carry)
         #Return dummyhead.next
         return dummyhead.next
-
-
+            
 
         
 
