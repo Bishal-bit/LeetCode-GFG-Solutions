@@ -8,12 +8,12 @@ class Node:
 class Solution:
     def segregate(self, head):
         #code here
-        zerohead=zero=Node (-1)
-        onehead=one=Node (-1)
-        twohead=two=Node (-1)
         temp=head
+        zero=zerohead=Node(-1)
+        one=onehead=Node(-1)
+        two=twohead=Node(-1)
         while temp :
-            nxt=temp.next
+            nex=temp.next
             temp.next=None
             if temp.data==0 :
                 zero.next=temp
@@ -24,15 +24,21 @@ class Solution:
             else :
                 two.next=temp
                 two=two.next
-            temp=nxt
+            temp=nex
         #Point last LL's node to None 
         two.next=None
-        if onehead.next : zero.next=onehead.next
-        else : zero.next=twohead.next
         
-        if twohead.next : one.next=twohead.next
+        #Connect as 0--1--2 based on avaibility
+        if zerohead.next :
+            if onehead.next : 
+                zero.next=onehead.next
+                if twohead.next : one.next=twohead.next
+            else : zero.next=twohead.next
+        elif onehead.next :
+            if twohead.next : one.next=twohead.next
         
-        if zerohead.next : return zerohead.next 
+        #Return LL        
+        if  zerohead.next : return zerohead.next
         elif onehead.next : return onehead.next
         return twohead.next
         
