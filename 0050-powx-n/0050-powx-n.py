@@ -1,18 +1,18 @@
 class Solution:
     def myPow(self, x: float, n: int) -> float:
         n1=n
-        if n<0 : n1=-1 *n
+        if n<0 : n1=-1*n
         ans=1
         while n1>0 :
-            if n1%2==0 :    #n1 as even
+            if n1%2==0 :
                 x*=x
                 n1//=2
-            else :          #n1 as odd
+            else :
                 ans*=x
                 n1-=1
-        
         if n<0 : return 1/ans
         return ans
+            
 
         
 
