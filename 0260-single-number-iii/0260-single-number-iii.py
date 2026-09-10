@@ -1,15 +1,15 @@
 class Solution:
     def singleNumber(self, nums: List[int]) -> List[int]:
-        xor1=0
+        exor=0
         for it in nums :
-            xor1^=it
-        #Rightmost is set on 1 set but in both of a,b
-        rightmost=xor1 & -xor1
+            exor^=it
+        #Rightmost is set on 1 where both of a,b differ
+        rightmost=exor & -exor
         a=b=0
         for it in nums :
             #Rightmost bit is set : do exor with a
-            if it & rightmost : a^=it
             #Rightmost bit is not set : do exor with b
+            if it & rightmost : a^=it
             else : b^=it
         return [a,b]
 
