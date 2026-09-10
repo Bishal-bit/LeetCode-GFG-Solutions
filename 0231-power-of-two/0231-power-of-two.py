@@ -1,8 +1,8 @@
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
         if n<1 : return False
-        if n & (n-1) ==0 : return True
-        return False 
+        if n & (n-1)==0 : return True   #4=> 100 (4-1)=3=> 011
+        return False
        
 
 # Synced seamlessly with LeetHub Pro
