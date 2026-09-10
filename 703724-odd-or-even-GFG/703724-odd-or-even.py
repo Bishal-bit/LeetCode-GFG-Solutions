@@ -1,8 +1,8 @@
 class Solution:
     def isEven (self, n):
         # code here 
-        if n & 1 : return False
-        return True
+        if n & 1 : return False     #Odd no
+        return True 
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
