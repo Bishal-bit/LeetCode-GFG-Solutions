@@ -1,15 +1,15 @@
 class Solution:
-    def func(self, i: int, k: int, target: int, v: List[int], ans :List[List[int]]) :
-        
-        if target==0 and len(v)==k : 
+    def func(self, i: int, k: int, n: int, v: List[int], ans: List[List[int]]) :
+
+        if n==0 and k==len(v) :
             ans.append(v.copy())
             return
-        
-        if target<0 or len(v)>k : return
-        
-        for it in range(i,10) :
+
+        if n<0 and len(v)>k : return
+
+        for it in range(i, 10) :
             v.append(it)
-            self.func(it+1, k, target-it, v, ans)
+            self.func(it+1, k, n-it, v, ans)
             v.pop()
 
     def combinationSum3(self, k: int, n: int) -> List[List[int]]:
