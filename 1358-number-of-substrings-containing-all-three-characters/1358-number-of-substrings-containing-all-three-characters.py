@@ -3,9 +3,8 @@ class Solution:
         #Sliding Window
         n=len(s)
         #Declare a map mp to record frequency of a,b,c
-        mp={ 'a':0, 'b':0, 'c':0 }
-        left= 0
-        ans=0
+        left=ans=0
+        mp={'a': 0, 'b': 0, 'c':0}
         for right in range(n) :
             #Update mp[s[right]]
             mp[s[right]]+=1
@@ -14,7 +13,7 @@ class Solution:
                 ans+=n-right
                 mp[s[left]]-=1
                 left+=1
-        #Return ans
+        #Return ans    
         return ans
 
 
