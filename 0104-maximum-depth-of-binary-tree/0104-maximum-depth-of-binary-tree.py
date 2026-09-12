@@ -11,7 +11,7 @@ class Solution:
         l=self.maxDepth(root.left)
         r=self.maxDepth(root.right)
         #1+max(l,r) for depth calculation
-        return 1+max(l,r)
+        return 1+max(l, r)
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
