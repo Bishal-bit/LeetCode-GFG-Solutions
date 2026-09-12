@@ -8,7 +8,7 @@ class Solution:
     def func(self, node: Optional[TreeNode]) :
         #If node is None then return 0
         if not node : return 0
-        #For l,r we have to count only (+)ve node.val so max(0,...) is used
+        #For l, r we have to count only (+)ve node.val so max(0,...) is used
         l=max(0, self.func(node.left))
         r=max(0, self.func(node.right))
         #Count maxsum and update it to self.maxsum
