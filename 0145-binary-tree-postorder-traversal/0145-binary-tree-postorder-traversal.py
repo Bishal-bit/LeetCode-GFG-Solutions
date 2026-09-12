@@ -5,19 +5,17 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def dfs(self, root: Optional[TreeNode], ans :List[int]) :
-        #If root==NULL then just return
-        if not root : return
-        #left->right->root
-        self.dfs(root.left,ans)
-        self.dfs(root.right,ans)
-        ans.append(root.val)
+    def func(self, node: Optional[TreeNode], ans: List[int]) :
+        #If node is None then just return
+        if not node : return
 
+        #Node.left-->Node.right-->Node.val
+        self.func(node.left, ans)
+        self.func(node.right, ans)
+        ans.append(node.val)
     def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         ans=[]
-        #DFS Traversal
-        self.dfs(root, ans)
-        #Return ans
+        self.func(root, ans)
         return ans
 
 # Synced seamlessly with LeetHub Pro
