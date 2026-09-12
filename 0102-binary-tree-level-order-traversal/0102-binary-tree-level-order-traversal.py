@@ -12,24 +12,24 @@ class Solution:
         q=deque()
         #Append root node inside q
         q.append(root)
-
         while q :
-            level=[]        #level for storing node.vals of each level
-            n=len(q)
+            level=[]            #level for storing node.val of each level
             #There would be multiple nodes inside queue
-            #That's why for loop is used
+            #That's why n, for loop are used
+            n=len(q)
             for i in range(n) :
-                node=q.popleft()    #Access node that pushed first
-                
+                node=q.popleft()        #Access node that pushed first
+
                 #Append node.val to level then check for left,right
                 level.append(node.val)
                 if node.left : q.append(node.left)
                 if node.right : q.append(node.right)
-            #Append level t ans
+            
+            #Append level to ans
             ans.append(level)
-        
         #Return ans
         return ans
+
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
