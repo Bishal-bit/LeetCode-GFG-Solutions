@@ -5,19 +5,24 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def func(self, node: Optional[TreeNode], ans: List[int]) :
-        #If it is None node then just return
-        if not node : return 
-        
-        #Node.val-->Node.left-->Node.right
-        ans.append(node.val)
-        self.func(node.left, ans)
-        self.func(node.right, ans)
-
     def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        #Using Stack
         ans=[]
-        self.func(root, ans)
+        #If root is None node then just return ans
+        if not root : return ans
+        st=[]
+        st.append(root)
+        while st :
+            #Access top node, pop it then put it's value to ans
+            node=st.pop()
+            ans.append(node.val)
+            #Due to LIFO nature of stack we push right then left
+            #So that left comes out before right
+            if node.right : st.append(node.right)
+            if node.left : st.append(node.left)
+        #Return ans
         return ans
+
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
