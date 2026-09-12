@@ -9,8 +9,10 @@ class Solution:
         #It is almost same as level order traversal
         ans=[]
         if not root : return ans
-        #Declare a queue and flag
-        q=deque([root])
+        #Declare a queue 
+        q=deque()
+        q.append(root)
+        #Declare a flag
         flag=True
         while q :
             n=len(q)
@@ -29,7 +31,8 @@ class Solution:
             flag=not flag
         #Return ans
         return ans
-        
+
+
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
