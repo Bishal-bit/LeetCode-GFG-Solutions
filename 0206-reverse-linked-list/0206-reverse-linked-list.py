@@ -4,18 +4,19 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        #Declare temp, previous, next nodes
+    def reverseList(self, head: ListNode | None) -> ListNode | None:
+        #Declare temp, prev, nex nodes
         temp=nex=head
-        pre=None
+        prev=None
+        
         while temp :
             nex=temp.next
-            temp.next=pre
-            pre=temp
+            temp.next=prev
+            prev=temp
             temp=nex
-        #Return pre
-        return pre
-
+        
+        #Return prev
+        return prev
         
 
 # Synced seamlessly with LeetHub Pro
