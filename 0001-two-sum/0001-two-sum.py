@@ -1,17 +1,16 @@
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
         #Declare a map
         mp={}
-        #Treverse through the array
+        #Treverse through the list
         for i, it in enumerate(nums) :
-            #Remain= difference b/w current element it and our target
-            remain=target-it
+            #Rem= difference b/w current element it and our target
+            rem=target-it
             #If remain is there in map then return it's index, rem's index
-            if remain in mp : return [i, mp[remain]]
+            if rem in mp : return [i, mp[rem]]
             #Strore mp[it]=i
             mp[it]=i
         
-
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
