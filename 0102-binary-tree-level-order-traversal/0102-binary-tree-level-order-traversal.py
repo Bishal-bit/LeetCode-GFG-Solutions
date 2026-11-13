@@ -5,15 +5,15 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+    def levelOrder(self, root: TreeNode | None) -> list[list[int]]:
         ans=[]
+        #If root is None then return ans
         if not root : return ans
-        #Dequeue is used for FIFO
-        q=deque()
-        #Append root node inside q
-        q.append(root)
+        
+        q=deque()           #Dequeue is used for FIFO
+        q.append(root)      #Append root node inside q
         while q :
-            level=[]            #level for storing node.val of each level
+            level=[]                    #level for storing node.val of each level
             #There would be multiple nodes inside queue
             #That's why n, for loop are used
             n=len(q)
@@ -30,6 +30,7 @@ class Solution:
         #Return ans
         return ans
 
+        
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
