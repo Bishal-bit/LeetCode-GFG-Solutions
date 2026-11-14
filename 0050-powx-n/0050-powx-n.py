@@ -1,19 +1,19 @@
 class Solution:
     def myPow(self, x: float, n: int) -> float:
-        n1=n
-        if n<0 : n1=-1*n
+        sign=1
         ans=1
-        while n1>0 :
-            if n1%2==0 :
+        if n<0 :
+            sign=-1
+            n=(-1)*n
+        while n :
+            if n%2==0 : 
                 x*=x
-                n1//=2
-            else :
+                n//=2
+            else : 
                 ans*=x
-                n1-=1
-        if n<0 : return 1/ans
+                n-=1
+        if sign==-1 : return 1/ans
         return ans
-            
-
         
 
 # Synced seamlessly with LeetHub Pro
