@@ -5,13 +5,14 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def maxDepth(self, root: Optional[TreeNode]) -> int:
+    def maxDepth(self, root: TreeNode | None) -> int:
         #This not root is very essential condition
         if not root : return 0
-        l=self.maxDepth(root.left)
-        r=self.maxDepth(root.right)
-        #1+max(l,r) for depth calculation
-        return 1+max(l, r)
+        left=self.maxDepth(root.left)
+        right=self.maxDepth(root.right)
+        #1+max(left,right) for depth calculation
+        return 1+max(left, right)
+        
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
